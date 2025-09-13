@@ -5,7 +5,7 @@ import WhatWeOffer from "../components/WhatweOffer";
 import DestinationCard from "../components/DestinationCard";
 import Testimonials from "../components/Testimonials";
 import chobe from "../assets/chobe.jpg";
-import hwange from "../assets/Hwange.jpg";
+import hwange from "../assets/hwange.jpg";
 import falls from "../assets/falls.jpg";
 import delta from "../assets/delta.jpg";
 import OrganizedTrips from "../components/OrganizedTrips";
