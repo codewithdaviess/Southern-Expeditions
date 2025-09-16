@@ -1,20 +1,19 @@
-export default function DestinationCard({ name, image }) {
+import { Link } from "react-router-dom";
+
+export default function DestinationCard({ name, image, trips, slug }) {
   return (
-    <div className="relative h-64 w-full rounded-lg overflow-hidden shadow-lg group">
-      {/* Background image */}
-      <img
-        src={image}
-        alt={name}
-        className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-      />
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition duration-300"></div>
-
-      {/* Destination Name */}
-      <div className="absolute bottom-0 left-0 w-full p-4">
-        <h3 className="text-white text-lg font-semibold">{name}</h3>
+    <Link to={`/destinations/${slug}`}>
+      <div className="relative rounded-lg overflow-hidden shadow-lg group cursor-pointer">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 text-white">
+          <h3 className="text-xl font-bold">{name}</h3>
+          <p>{trips?.length || 0} Experiences</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
