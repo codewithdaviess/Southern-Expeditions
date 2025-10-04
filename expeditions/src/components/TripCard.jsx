@@ -22,14 +22,14 @@ export default function TripCard({ image, title, description, price, duration })
 
         {/* Price & Duration */}
         <div className="flex justify-between items-center text-gray-800 font-medium">
-          {/* Price */}
-          <span className="text-[#9aa04f] text-xl font-bold">{price}</span>
-
-          {/* Duration with clock */}
+ {/* Duration with clock */}
           <div className="flex items-center bg-[#b5bc7933] text-[#9aa04f] px-3 py-1 rounded-full space-x-2">
             <Clock className="w-4 h-4" />
             <span className="text-sm font-medium">{duration}</span>
           </div>
+
+          {/* Price */}
+          <span className="text-[#9aa04f] text-xl font-bold">{price}</span>
         </div>
       </div>
     </div>
